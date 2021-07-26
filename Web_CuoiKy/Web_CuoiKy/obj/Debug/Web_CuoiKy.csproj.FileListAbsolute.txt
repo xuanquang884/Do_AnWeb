@@ -433,8 +433,8 @@ C:\Users\zkybo\Desktop\1811061671_DinhXuanQuang_GiuaKy\Do_An_web_CuoiKy\Web_Cuoi
 C:\Users\zkybo\Desktop\1811061671_DinhXuanQuang_GiuaKy\Do_An_web_CuoiKy\Web_CuoiKy\Web_CuoiKy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\zkybo\Desktop\1811061671_DinhXuanQuang_GiuaKy\Do_An_web_CuoiKy\Web_CuoiKy\Web_CuoiKy\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\zkybo\Desktop\1811061671_DinhXuanQuang_GiuaKy\Do_An_web_CuoiKy\Web_CuoiKy\Web_CuoiKy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\zkybo\Desktop\1811061671_DinhXuanQuang_GiuaKy\Do_An_web_CuoiKy\Web_CuoiKy\Web_CuoiKy\obj\Debug\Web_CuoiKy.csproj.AssemblyReference.cache
 C:\Users\zkybo\Desktop\1811061671_DinhXuanQuang_GiuaKy\Do_An_web_CuoiKy\Web_CuoiKy\Web_CuoiKy\obj\Debug\Web_CuoiKy.csproj.CoreCompileInputs.cache
 C:\Users\zkybo\Desktop\1811061671_DinhXuanQuang_GiuaKy\Do_An_web_CuoiKy\Web_CuoiKy\Web_CuoiKy\obj\Debug\Web_CuoiKy.csproj.CopyComplete
 C:\Users\zkybo\Desktop\1811061671_DinhXuanQuang_GiuaKy\Do_An_web_CuoiKy\Web_CuoiKy\Web_CuoiKy\obj\Debug\Web_CuoiKy.dll
 C:\Users\zkybo\Desktop\1811061671_DinhXuanQuang_GiuaKy\Do_An_web_CuoiKy\Web_CuoiKy\Web_CuoiKy\obj\Debug\Web_CuoiKy.pdb
+C:\Users\zkybo\Desktop\1811061671_DinhXuanQuang_GiuaKy\Do_An_web_CuoiKy\Web_CuoiKy\Web_CuoiKy\obj\Debug\Web_CuoiKy.csproj.AssemblyReference.cache

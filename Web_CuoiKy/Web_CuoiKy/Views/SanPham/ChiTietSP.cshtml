@@ -3,6 +3,47 @@
     ViewBag.Title = "ChiTietSP";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .product img:hover{
+        width:250px;
+    }
+  .product{
+      border:1px solid;
+      padding:20px;
+      border-radius: 18px;
+  }
+</style>
+<script type="text/javascript">
+    $(function () {
+        $("#addtocart").click(function () {
+            var model = {};
+            //lấy id sản phẩm
+            model.Id = @Model.MASP;
+            // lấy số lượng đặt hàng
+            model.Quantity = $("#ipQuantity").val();
+            debugger;
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("AddToCart", "Cart")',
+                data:  JSON.stringify(model) ,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function () {
+                    alert("Thêm giỏ hàng thành công!")
+                    $('#CartCount').text(@Session["count"] + 1);
+                },
+                error: function () {
+                    alert("Lỗi trong khi thêm vào giỏ hàng!");
+                }
+            });
+            return false;
+        });
+    });
+</script>
+
 <div id="page-content" class="single-page">
     <div class="container">
         <div class="row">
@@ -14,13 +55,13 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="row">
             <div id="main-content" class="col-md-8">
                 <div class="product">
                     <div class="col-md-6">
                         <div class="image">
-                            <img src="~/Images/@Model.HINH" style="height:300px"  />
+                            <img src="~/Images/@Model.HINH" style="height:300px" />
                             <div class="image-more">
                                 <ul class="row">
                                     <li class="col-lg-3 col-sm-3 col-xs-4">
@@ -30,10 +71,10 @@
                                         <a href="#"> <img src="~/Images/@Model.HINH2" /></a>
                                     </li>
                                     <li class="col-lg-3 col-sm-3 col-xs-4">
-                                        <a href="#"> <img src="~/Images/@Model.HINH3"  /></a>
+                                        <a href="#"> <img src="~/Images/@Model.HINH3" /></a>
                                     </li>
                                     <li class="col-lg-3 col-sm-3 col-xs-4">
-                                        <a href="#"> <img src="~/Images/@Model.HINH4"  /></a>
+                                        <a href="#"> <img src="~/Images/@Model.HINH4" /></a>
                                     </li>
                                 </ul>
                             </div>
@@ -49,7 +90,7 @@
                                 </ul>
                             </div>
                             <div class="price">@Model.GIA VND</div>
-                            <div class="options">
+                           @* <div class="options">
                                 Mời Bạn Chọn Size
                                 <select>
                                     <option value="" selected>----Please Select----</option>
@@ -58,10 +99,19 @@
                                     <option value="L">L</option>
                                     <option value="XL">XL</option>
                                 </select>
-                            </div>
-                            <div class="well">
-                                <label>Qty: </label>
-                                <input class="form-inline quantity" type="text" value="1"><a href="#" class="btn btn-2 ">ADD</a>
+                            </div>*@
+                            <div class="form-row  mt-4">
+                                <div class="form-group col-md flex-grow-0">
+                                    <div class="buttons_added">
+                                        <input  id="ipQuantity" aria-label="quantity" class="input-qty" max="30" min="1" name="" type="number" value="1">
+                                    </div>
+                                </div> <!-- col.// -->
+                                <div class="form-group col-md">
+                                    <a href="#" id="addtocart" class="btn  btn-primary">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span class="text" h>Thêm vào giỏ hàng</span>
+                                    </a>
+                                </div> <!-- col.// -->
                             </div>
                         </div>
                     </div>
@@ -75,7 +125,7 @@
                         <div id="description" class="tab-pane fade in active">
                             <h4>@Model.TENSP</h4>
                             <p>@Model.MOTA</p>
-                            
+
                         </div>
                     </div>
                 </div>

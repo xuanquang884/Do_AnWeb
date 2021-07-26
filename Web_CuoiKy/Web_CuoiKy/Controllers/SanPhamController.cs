@@ -19,7 +19,7 @@ namespace Web_CuoiKy.Controllers
         }
         public ActionResult Ao_Khoac(int pageNo = 1)
         {
-            var listsanpham = db.San_Pham.Where(p => p.MALOAISP == "AO01").ToList().ToPagedList(pageNo, pageSize);
+            var listsanpham = db.San_Pham.Where(p => p.MALOAISP == "AK01").ToList().ToPagedList(pageNo, pageSize);
             return View(listsanpham);
         }
         public ActionResult Ao_SoMi(int pageNo = 1)

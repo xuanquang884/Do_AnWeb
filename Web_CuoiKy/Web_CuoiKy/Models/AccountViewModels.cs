@@ -48,12 +48,12 @@ namespace Web_CuoiKy.Models
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage ="Bạn chưa nhập Email")]
         [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Bạn chưa nhập mật khẩu")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
@@ -64,23 +64,23 @@ namespace Web_CuoiKy.Models
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập Email")]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập Tên")]
         [Display(Name = "Name")]
         public string Name { get; set; }
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Required(ErrorMessage ="Bạn chưa nhập mật khẩu")]
+        [StringLength(100, ErrorMessage = "{0} phải có ít nhất {2} chữ số.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "Mật khẩu và mật khẩu chứng thực không giống nhau.")]
         public string ConfirmPassword { get; set; }
     }
 
